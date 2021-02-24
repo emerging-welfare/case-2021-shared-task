@@ -11,4 +11,6 @@ Information and data related to the Socio-political and Crisis Events Detection 
 * Annotation manual for task 1 and task 3 are [here](https://github.com/emerging-welfare/general_info/tree/master/annotation-manuals).
 * Annotation manuals, ACLED, for task 2 are [here](https://acleddata.com/resources/general-guides/#1603120929112-8ecf0356-6cf0).
 
-The task  descriptions will be put both as a detailed file and a summary in the README.
+This repository is being updated continuosly. 
+
+Please contact Ali Hürriyetoğlu (ahurriyetoglu@ku.edu.tr) if you have any question or comment regarding this shared task.
