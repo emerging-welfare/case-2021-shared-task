@@ -1,4 +1,4 @@
-Information and data related to the Socio-political and Crisis Events Detection shared task at [CASE](https://emw.ku.edu.tr/case-2021/) @ [ACL-IJCNLP 2021](https://2021.aclweb.org/) workshop.
+Information and data related to the Socio-political and Crisis Events Detection shared task at [CASE](https://emw.ku.edu.tr/case-2021/) @ [ACL-IJCNLP 2021](https://2021.aclweb.org/) workshop. The detailed description of the task can be found in the file 20210224-CASE-2021-ProtestNews-Task-description.pdf
 
 
 # Training Data
