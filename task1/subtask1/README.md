@@ -1,0 +1,1 @@
+We will provide a Docker image to the participants to download the HTMLs and extract text from them. We are not allowed to share the full text of the news articles ourselves due to copyright of the data.
