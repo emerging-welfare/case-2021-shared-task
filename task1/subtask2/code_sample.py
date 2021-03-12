@@ -10,27 +10,23 @@ class RandomModel():
     def __init__(self):
         pass
     
-    def fit(self,trainingfile):
+    def fit(self,data):
         """
         Learns the seed for future prediction.
         Doesnt use the training file.
         """
-        data = read(trainingfile) # just to show, not using.
         self.seed = random.sample(range(100),1)[0]
 
     
-    def predict(self,testfile,sysdoc):
+    def predict(self,test_data):
         """
         Reads the test file and makes predictions based on the seed which was learnt in the fit() part.
         Saves the predictions in the required format.
         """
         random.seed(self.seed)
-        data = read(testfile)
-        preds = [{"id":instance['id'],"prediction":random.sample([0,1],1)[0]} for instance in data]
-        with open(sysdoc,"w") as f:
-            for doc in preds:
-                json.dump(doc,f)
-                f.write("\n")
+        
+        preds = [{"id":instance['id'],"prediction":random.sample([0,1],1)[0]} for instance in test_data]
+        return preds
 
 def read(path):
     """
@@ -75,13 +71,21 @@ def main(train_file,test_file,prediction_output_file,output_file):
     
     #Create model.
     model = RandomModel()
-    
+    #Read training data.
+    data = read(train_file)
     #Fit. 
-    model.fit(train_file)
+    model.fit(data)
     
-    #Predict and save your results in the required format to the given path (prediction_output_file).
-    model.predict(test_file,prediction_output_file)
-    
+    #Read test data.
+    test_data = read(test_file)
+    #Predict.
+    predictions = model.predict(test_data)
+    # and save your results in the required format to the given path (prediction_output_file)
+    with open(prediction_output_file,"w") as f:
+        for doc in predictions:
+            json.dump(doc,f)
+            f.write("\n")
+                
     #Evaluate sys outputs and save results.
     evaluate(test_file,
              prediction_output_file,

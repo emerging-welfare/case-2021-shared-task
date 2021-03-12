@@ -1,31 +1,29 @@
 import json
 import random
+import itertools
 import argparse
-import pandas as pd
-from sklearn.metrics import adjusted_rand_score, v_measure_score
+import subprocess
 
 class OneClusterModel():
     def __init__(self):
         pass
     
-    def fit(self,train_file):  
+    def fit(self,train_data):  
         return
     
-    def predict(self,test_file,prediction_output_file):
+    def predict(self,test_data):
         """
         Takes test file (.json) and path for prediction outputs to be save in required format (.json).
         
         Predicts given sentences as single cluster.
         """
         
-        data = read(test_file)
+        predictions = test_data
         
-        for idx,instance in enumerate(data):
-            data[idx]['event_clusters'] = [data[idx]['sentence_no']]
-        with open(prediction_output_file,"w") as f:
-            for doc in data:
-                json.dump(doc,f)
-                f.write("\n")
+        for idx,instance in enumerate(predictions):
+            predictions[idx]['event_clusters'] = [predictions[idx]['sentence_no']]
+        
+        return predictions
                 
 def read(path):
     data = []
@@ -47,23 +45,33 @@ def convert_to_sklearn_format(clusters):
     return labels
 
 def evaluate(goldfile,sysfile,results_file):
-    gold_df = pd.read_json(goldfile, orient="records", lines=True)
-    pred_df = pd.read_json(sysfile, orient="records", lines=True)
+    """
+    Uses scorch for evaluation. > https://github.com/LoicGrobol/scorch | pip install scorch
+    
+    Takes gold file path (.json), predicted file path (.json) and file name (.txt) to save the results.
+    """
+    gold = read(goldfile)
+    sys = read(sysfile)
 
-    gold_clusters = [convert_to_sklearn_format(g) for g in gold_df["event_clusters"]]
-    pred_clusters = [convert_to_sklearn_format(p) for p in pred_df["event_clusters"]]
+    gold_clusters = sum([[[str(idx)+"_"+str(event) for event in cluster] for cluster in doc["event_clusters"]] for idx,doc in enumerate(gold)],[])
+    sys_clusters = sum([[[str(idx)+"_"+str(event) for event in cluster] for cluster in doc["event_clusters"]] for idx,doc in enumerate(sys)],[])
+
+    gold_links = sum([list(itertools.combinations(cluster,2)) for cluster in gold_clusters],[])
+    gold_events = [event for pair in gold_links for event in pair]
+
+    sys_links = sum([list(itertools.combinations(cluster,2)) for cluster in sys_clusters],[])
+    sys_events = [event for pair in sys_links for event in pair]
+
+    with open("gold.json","w") as f:
+        json.dump({"type":"graph","mentions":gold_events,"links":gold_links},f)
+    with open("sys.json","w") as f:
+        json.dump({"type":"graph","mentions":sys_events,"links":sys_links},f)
+        
+    subprocess.run(["scorch","gold.json","sys.json",results_file])
+    subprocess.run(["rm","gold.json","sys.json"])
     
-    ari_scores = [ adjusted_rand_score(g, p) for g, p in zip(gold_clusters, pred_clusters) ]
-    macro_ari = sum(ari_scores) / len(gold_df)
-    micro_ari = sum(s * len(c) for s, c in zip(ari_scores, gold_df["sentence_no"])) / sum(len(s) for s in gold_df["sentence_no"])
+    print(open(results_file,"r").read())
     
-    v_scores = [ v_measure_score(g, p) for g, p in zip(gold_clusters, pred_clusters) ]
-    macro_v = sum(v_scores) / len(gold_df)
-    micro_v = sum(s * len(c) for s, c in zip(v_scores, gold_df["sentence_no"])) / sum(len(s) for s in gold_df["sentence_no"])
-    results = "-"*40+"\n"+"\t"*3+"Macro\tMicro\n"+"-"*40+"\nAdjusted Rand Index:\t%.4f\t%.4f\n"%(macro_ari,micro_ari)+"-"*40+"\nF1 - Measure Score :\t%.4f\t%.4f"%(macro_v,micro_v)+"\n"+"-"*40
-    print(results)
-    with open(results_file,'w') as r:
-        r.write(results)
 
 def parse():
     parser = argparse.ArgumentParser()
@@ -80,12 +88,21 @@ def main(train_file,test_file,prediction_output_file,results_file):
     
     #Create model.
     model = OneClusterModel()
-    
+    #Read training data.
+    train_data = read(train_file)
     #Fit. 
-    model.fit(train_file)
+    model.fit(train_data)
     
+    #Read test data.
+    test_data = read(test_file)
     #Predict and save your results in the required format to the given path (prediction_output_file).
-    model.predict(test_file,prediction_output_file)
+    predictions = model.predict(test_data)
+    
+    #Saving the predictions in required format.
+    with open(prediction_output_file,"w") as f:
+        for doc in predictions:
+            json.dump(doc,f)
+            f.write("\n")
     
     evaluate(test_file,
              prediction_output_file,
