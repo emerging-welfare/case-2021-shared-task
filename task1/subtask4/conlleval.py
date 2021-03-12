@@ -1,21 +1,25 @@
 """
+****** IMPORTANT NOTE ******
+This script was taken directly from https://github.com/sighsmile/conlleval
+
+
 This script applies to IOB2 or IOBES tagging scheme.
 If you are using a different scheme, please convert to IOB2 or IOBES.
 
 IOB2:
-- B = begin, 
-- I = inside but not the first, 
+- B = begin,
+- I = inside but not the first,
 - O = outside
 
-e.g. 
+e.g.
 John   lives in New   York  City  .
 B-PER  O     O  B-LOC I-LOC I-LOC O
 
 IOBES:
-- B = begin, 
-- E = end, 
-- S = singleton, 
-- I = inside but not the first or the last, 
+- B = begin,
+- E = end,
+- S = singleton,
+- I = inside but not the first or the last,
 - O = outside
 
 e.g.
@@ -33,7 +37,7 @@ from collections import defaultdict
 def split_tag(chunk_tag):
     """
     split chunk tag into IOBES prefix and chunk_type
-    e.g. 
+    e.g.
     B-PER -> (B, PER)
     O -> (O, None)
     """
@@ -44,7 +48,7 @@ def split_tag(chunk_tag):
 def is_chunk_end(prev_tag, tag):
     """
     check if the previous chunk ended between the previous and current word
-    e.g. 
+    e.g.
     (B-PER, I-PER) -> False
     (B-LOC, O)  -> True
 
@@ -101,9 +105,9 @@ def count_chunks(true_seqs, pred_seqs):
     true_seqs: a list of true tags
     pred_seqs: a list of predicted tags
 
-    return: 
-    correct_chunks: a dict (counter), 
-                    key = chunk types, 
+    return:
+    correct_chunks: a dict (counter),
+                    key = chunk types,
                     value = number of correctly identified chunks per type
     true_chunks:    a dict, number of true chunks per type
     pred_chunks:    a dict, number of identified chunks per type
@@ -154,7 +158,7 @@ def count_chunks(true_seqs, pred_seqs):
     if correct_chunk is not None:
         correct_chunks[correct_chunk] += 1
 
-    return (correct_chunks, true_chunks, pred_chunks, 
+    return (correct_chunks, true_chunks, pred_chunks,
         correct_counts, true_counts, pred_counts)
 
 def get_result(correct_chunks, true_chunks, pred_chunks,
@@ -183,10 +187,10 @@ def get_result(correct_chunks, true_chunks, pred_chunks,
         return res
 
     # print overall performance, and performance per chunk type
-    
+
     print("processed %i tokens with %i phrases; " % (sum_true_counts, sum_true_chunks), end='')
     print("found: %i phrases; correct: %i.\n" % (sum_pred_chunks, sum_correct_chunks), end='')
-        
+
     print("accuracy: %6.2f%%; (non-O)" % (100*nonO_correct_counts/nonO_true_counts))
     print("accuracy: %6.2f%%; " % (100*sum_correct_counts/sum_true_counts), end='')
     print("precision: %6.2f%%; recall: %6.2f%%; FB1: %6.2f" % (prec, rec, f1))
@@ -213,7 +217,7 @@ def evaluate(true_seqs, pred_seqs, verbose=True):
 
 def evaluate_conll_file(fileIterator):
     true_seqs, pred_seqs = [], []
-    
+
     for line in fileIterator:
         cols = line.strip().split()
         # each non-empty line must contain >= 3 columns
