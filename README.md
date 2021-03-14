@@ -16,15 +16,16 @@ This repository is being updated continuosly.
 Please contact Ali Hürriyetoğlu (ahurriyetoglu@ku.edu.tr) if you have any question or comment regarding this shared task.
 
 # Important Dates
-Release of training data for Task 1: March 14, 2021, Task 2: already available
-Registration deadline: April 30, 2021
-Release of test data for all tasks to registered participants: May 4 2021, 
-Submission of system responses: May 8, 2021 (12:00 CET)
-Results announced to participants: May 10, 2021
-Shared Task Papers Due: May 21, 2021
-Notification of Acceptance: May 28, 2021
-Camera-ready papers due: June 7, 2021
-CASE 2021 Workshop (presentation of the ST results): August 5-6, 2021
+Release of training data for Task 1: March 14, 2021, Task 2: already available 
+Registration deadline: April 30, 2021 
+Release of test data for all tasks to registered participants: May 4 2021  
+Submission of system responses: May 8, 2021 (12:00 CET) 
+Results announced to participants: May 10, 2021 
+Shared Task Papers Due: May 21, 2021 
+Notification of Acceptance: May 28, 2021 
+Camera-ready papers due: June 7, 2021 
+CASE 2021 Workshop (presentation of the ST results): August 5-6, 2021 
+
 
 All deadlines are 23:59 AoE (anywhere on Earth) and in the year 2021, unless otherwise stated above.
 
