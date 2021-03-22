@@ -5,8 +5,8 @@ Information and data related to the Socio-political and Crisis Events Detection 
            - Subtask 2: Sentence classification   \
            - Subtask 3: Event sentence coreference identification   \
            - Subtask 4: Event extraction   \
-* Task 2: Fine-grained classification of Socio-political events    \
-* Task 3: Discovering Black Lives Matter events in the United States \   
+* Task 2: Fine-grained classification of Socio-political events  \
+* Task 3: Discovering Black Lives Matter events in the United States  \
 
 Please find the code and data samples and the submission formats in the Task 1 and Task 2 folders.
 
