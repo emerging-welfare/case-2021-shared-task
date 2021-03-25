@@ -13,7 +13,7 @@ Please find the code and data samples and the submission formats in the task1 an
 
 # Training Data
 * Task 1: Please sign the application [form](https://github.com/emerging-welfare/case-2021-shared-task/blob/main/CASE2021-Socio-political-and-Crisis-Events-Shared-Task-Individual-Application-Form.pdf) and send it to Ali Hürriyetoğlu (ahurriyetoglu@ku.edu.tr). The training data has been available since March 14, 2021.
-* Task 2: For the training purposes one can use event-related textual data of any kind, where we recommend considering exploiting the short text snippets reporting events which are part of the large event dataset created by ACLED (https://acleddata.com/), and which can be obtained from ACLED using this web page: https://acleddata.com/data-export-tool/ for academic purposes.
+* Task 2: For the training purposes one can use event-related textual data of any kind, where we recommend considering exploiting the short text snippets reporting events which are part of the large event dataset created by ACLED (https://acleddata.com/), and which can be obtained from ACLED using this web page: https://acleddata.com/data-export-tool/ for academic purposes. Please send an e-mail to Jakub Piskorski case2021.task.finegrained@gmail.com as soon as possible if you intend to work on this task.
 * Task 3: There is not any training data for this task. The data utilized for tasks 2 and 3 or any additional data can be used to build systems/models that can determine Black Lives Matter (BLM) events in tweets and news articles.  The tweet collection that will be processed by the participants is collected using BLM specific hashtags.
 
 
@@ -23,7 +23,11 @@ Please find the code and data samples and the submission formats in the task1 an
 * This shared task is a continuation of the shared tasks [CLEF 2019 Lab  Protest News](https://emw.ku.edu.tr/clef-protestnews-2019/), and event sentence coreference identification task at [AESPEN @ LREC 2020](https://emw.ku.edu.tr/aespen-2020/)  
 
 
-Please contact Ali Hürriyetoğlu (ahurriyetoglu@ku.edu.tr) if you have any question or comment regarding this shared task. This repository is being updated continuosly.  
+# Contact
+Please reach us using the following e-mail addresses for anything you may think we can support you: Ali Hürriyetoğlu, ahurriyetoglu@ku.edu.tr (Task 1 and Task 3 and any other issue), Jakub Piskorski case2021.task.finegrained@gmail.com (Task 2), Salvatore Giorgi, sgiorgi@sas.upenn.edu (Task 3, collecting an on the ground events list and using the tweet collection).  
+
+
+This repository is being updated continuosly.  
 
 
 # Important Dates
