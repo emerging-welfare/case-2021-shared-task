@@ -46,8 +46,8 @@ def convert_to_scorch_format(docs, cluster_key="event_clusters"):
         for cluster in doc[cluster_key]:
             all_clusters.append([str(idx) + "_" + str(sent_id) for sent_id in cluster])
 
+    all_events = [event for cluster in all_clusters for event in cluster]
     all_links = sum([list(itertools.combinations(cluster,2)) for cluster in all_clusters],[])
-    all_events = [event for pair in all_links for event in pair]
 
     return all_links, all_events
 
