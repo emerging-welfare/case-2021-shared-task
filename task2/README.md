@@ -1,5 +1,4 @@
-# This folder contains relevant information on Task 2: 
-# Fine-grained Event Classification
+# This folder contains relevant information on Task 2: Fine-grained Event Classification
 
 * Task description is provided in "TASK 2 Fine-grained Event Classification.pdf
 
