@@ -4,7 +4,7 @@
 
 * [Note on EVENT TYPES.txt](https://github.com/emerging-welfare/case-2021-shared-task/blob/main/task2/Note%20on%20EVENT%20TYPES..txt) contains information on the encoding of event types for the task.
 
-* "Note on UNSEEN events.pdf" provides a short description of the additional "unseen" event types (no training data) that
+* [Note on UNSEEN events.pdf](https://github.com/emerging-welfare/case-2021-shared-task/blob/main/task2/Note%20on%20UNSEEN%20events.pdf) provides a short description of the additional "unseen" event types (no training data) that
 complement the ACLED event types.
 
 * "Sample_data" folder contains examples of input/output files.
