@@ -7,7 +7,7 @@
 * [Note on UNSEEN events.pdf](https://github.com/emerging-welfare/case-2021-shared-task/blob/main/task2/Note%20on%20UNSEEN%20events.pdf) provides a short description of the additional "unseen" event types (no training data) that
 complement the ACLED event types.
 
-* "Sample_data" folder contains examples of input/output files.
+* [Sample_data](https://github.com/emerging-welfare/case-2021-shared-task/tree/main/task2/sample_data) folder contains examples of input/output files.
 
 sample_data/sample_input.txt
 this file is a five entry sample describing the input format that will be provided. Each line being a snippet with the corresponding id, separated with a tab. 
