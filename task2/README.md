@@ -2,7 +2,7 @@
 
 Note on EVENT TYPES.txt contains information on the encoding of event types for the task.
 
-Note on UNSEEN TYPES.txt provides a short description of the additional "unseen" event types (no training data) that
+Note on UNSEEN events.pdf provides a short description of the additional "unseen" event types (no training data) that
 complement the ACLED event types.
 
 Sample_data folder contains examples of input/output files.
