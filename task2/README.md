@@ -2,7 +2,7 @@
 
 * Task description is provided in [TASK 2 Fine-grained Event Classification.pdf](https://github.com/emerging-welfare/case-2021-shared-task/blob/main/task2/TASK%202%20Fine-grained%20Event%20Classification.pdf)
 
-* "Note on EVENT TYPES.txt" contains information on the encoding of event types for the task.
+* [Note on EVENT TYPES.txt](https://github.com/emerging-welfare/case-2021-shared-task/blob/main/task2/Note%20on%20EVENT%20TYPES..txt) contains information on the encoding of event types for the task.
 
 * "Note on UNSEEN events.pdf" provides a short description of the additional "unseen" event types (no training data) that
 complement the ACLED event types.
