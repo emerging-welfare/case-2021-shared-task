@@ -7,6 +7,6 @@ preprint arXiv:[2009.00596](https://arxiv.org/abs/2009.00596). [Dataset](https:/
 
 The folder 'inputdata' contains instructions on obtaining the Twitter data.
 
-#Acknowledgements
+# Acknowledgements
 
 Salvatore Giorgi [@sjgiorgi](https://github.com/sjgiorgi/) and Sy Hywang [@syhwng](https://github.com/syhwng/) have prepared the data. Vanni Zavarella evaluates the submissions in this Task.
