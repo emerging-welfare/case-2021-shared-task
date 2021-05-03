@@ -2,4 +2,4 @@ We will process text data originated from two sources that are Twitter and New Y
 
 The evaluation will be performed on a manually curated list of BLM events for the relevant period. Please submit separate files for the events you extracted from each source to ahurriyetoglu@ku.edu.tr, vanni.ZAVARELLA@ec.europa.eu, and sgiorgi@sas.upenn.edu. If you want to combine them, you can create a third file.
 
-The full description of the task and submission format will be uploaded here shortly.
+The full description of the task is available in this https://github.com/emerging-welfare/case-2021-shared-task/blob/e2fc41524cfdc8791298fffca3824fe04b530f42/task3/TASK%203_%20DISCOVERING%20BLACK%20LIVES%20MATTER%20EVENTS%20IN%20UNITED%20STATES.pdf and a sample submission format can be found in the file.
