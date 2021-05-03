@@ -1,3 +1,5 @@
+# Socio-political and Crisis Events Detection at CASE @ ACL-IJCNLP 2021  
+
 Information and data related to the Socio-political and Crisis Events Detection shared task at [CASE](https://emw.ku.edu.tr/case-2021/) @ [ACL-IJCNLP 2021](https://2021.aclweb.org/) workshop. The detailed description of the task can be found in this [file](https://github.com/emerging-welfare/case-2021-shared-task/blob/main/CASE-2021-ProtestNews-Task-description.pdf). The tasks are 
 
 * Task 1: Multilingual protest news detection (English, Spanish, Portuguese, Hindi)   \
