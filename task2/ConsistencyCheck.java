@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.Set; 
 import java.util.StringTokenizer;
 
 /**
@@ -70,6 +70,9 @@ public class ConsistencyCheck {
 		 eventTypes.add("ORG_CRIME");
 		 eventTypes.add("NATURAL_DISASTER");
 		 eventTypes.add("MAN_MADE_DISASTER");		 
+		 eventTypes.add("ATTRIB");
+		 eventTypes.add("DIPLO");		 
+		 
 }
 	  
 	 public static void main(String[] args) throws IOException
