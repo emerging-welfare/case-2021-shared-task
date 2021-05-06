@@ -36,8 +36,8 @@ This repository is being updated continuosly.
 Release of training data for Task 1: March 14, 2021, Task 2: already available  
 Registration deadline: April 30, 2021  
 Release of test data for all tasks to registered participants: May 4 2021  
-Submission of system responses: May 8, 2021 (12:00 CET)  
-Results announced to participants: May 10, 2021  
+Submission of system responses: Task 2: May 8, 2021 (12:00 CET), Task 1: May 9 (AoE), Task 3: May 10 (AoE)  
+Results announced to participants: Task 2: May 10 (AoE), Task 1: May 10 (AoE), Task 3: May 12 (AoE)  
 Shared Task Papers Due: May 21, 2021  
 Notification of Acceptance: May 28, 2021  
 Camera-ready papers due: June 7, 2021  
