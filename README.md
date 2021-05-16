@@ -1,5 +1,8 @@
 # Socio-political and Crisis Events Detection at CASE @ ACL-IJCNLP 2021  
 
+**The results are on:** [Codalab](https://competitions.codalab.org/competitions/31247).
+**Additional runs and participation is possible on** [another Codalab page](https://competitions.codalab.org/competitions/31639)
+
 Information and data related to the Socio-political and Crisis Events Detection shared task at [CASE](https://emw.ku.edu.tr/case-2021/) @ [ACL-IJCNLP 2021](https://2021.aclweb.org/) workshop. The detailed description of the task can be found in this [file](https://github.com/emerging-welfare/case-2021-shared-task/blob/main/CASE-2021-ProtestNews-Task-description.pdf). The tasks are 
 
 * Task 1: Multilingual protest news detection (English, Spanish, Portuguese, Hindi)   \
@@ -10,7 +13,7 @@ Information and data related to the Socio-political and Crisis Events Detection 
 * Task 2: Fine-grained classification of Socio-political events  
 * Task 3: Discovering Black Lives Matter events in the United States  
 
-Please find the code and data samples and the submission formats in the task1 and task2 folders. Information about Task 3 will follow.
+Please find the code and data samples and the submission formats in the task1, task2, and task3 folders.
 
 
 # Training Data
