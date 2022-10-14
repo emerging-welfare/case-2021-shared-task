@@ -2,7 +2,8 @@
 
 **The results are on:** [Codalab](https://competitions.codalab.org/competitions/31247). \
 **Additional runs and participation is possible on** [another Codalab page](https://competitions.codalab.org/competitions/31639). \
-**Details of the systems submitted** The detailed system desctiptions are in the [proceedings](https://aclanthology.org/events/acl-2021/#2021-case-1). \
+**Details of the systems submitted:** The detailed system desctiptions are in the [proceedings](https://aclanthology.org/events/acl-2021/#2021-case-1). \
+**The follow-up event:** [CASE 2022](https://github.com/emerging-welfare/case-2022-multilingual-event)
 
 Information and data related to the Socio-political and Crisis Events Detection shared task at [CASE](https://emw.ku.edu.tr/case-2021/) @ [ACL-IJCNLP 2021](https://2021.aclweb.org/) workshop. The detailed description of the task can be found in this [file](https://github.com/emerging-welfare/case-2021-shared-task/blob/main/CASE-2021-ProtestNews-Task-description.pdf). The tasks are 
 
